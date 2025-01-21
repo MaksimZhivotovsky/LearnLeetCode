@@ -125,19 +125,19 @@ public class НепрерывныйРюкзак {
 
         System.out.printf("%.6f\n", maxValue);
     }
+
+    static class Item {
+        int value;
+        int weight;
+
+        Item(int value, int weight) {
+            this.value = value;
+            this.weight = weight;
+        }
+
+        double getValuePerWeight() {
+            return (double) value / weight;
+        }
+    }
 }
 
-class Item {
-    int value; // стоимость
-    int weight; // объем
-
-    Item(int value, int weight) {
-        this.value = value;
-        this.weight = weight;
-    }
-
-    // Метод для вычисления стоимости на единицу объема
-    double getValuePerWeight() {
-        return (double) value / weight;
-    }
-}
